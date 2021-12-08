@@ -1,20 +1,19 @@
 'use strict'
 
 const express = require('express')
+
 const app = express()
-const path = require('path')
 
-require('../drivers/connect-mongo')
+require('../drivers/mongo-connect')
 
-//Static files
-app.use(express.static(path.join(__dirname,'./')))
+//settigs 
+app.set('port', process.emitWarning.PORT || 3000)
 
-//Settings
-app.set('port', process.env.PORT || 4000)
-
-//Middleware
-app.use(express.json)
+//middleware
+app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-//routes
+//routers
+app.use('/api',require('../routes/index'));
+
 module.exports = app
