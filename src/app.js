@@ -1,4 +1,4 @@
-'use strict'
+'use restrict'
 
 const express = require('express')
 
@@ -7,7 +7,7 @@ const app = express()
 require('../drivers/mongo-connect')
 
 //settigs 
-app.set('port', process.emitWarning.PORT || 3000)
+app.set('port', process.emitWarning.PORT || 4000)
 
 //middleware
 app.use(express.json())

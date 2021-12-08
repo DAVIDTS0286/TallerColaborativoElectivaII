@@ -1,4 +1,4 @@
-'use strict'
+'use restrict'
 
 
 function getElements(req , res){

@@ -1,4 +1,4 @@
-'use strict'
+'use restrict'
 
 const mongoose =require('mongoose')
 
