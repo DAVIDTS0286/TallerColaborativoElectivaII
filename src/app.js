@@ -1,19 +1,20 @@
-'use restrict'
+'use strict'
 
 const express = require('express')
-
 const app = express()
 
 require('../drivers/mongo-connect')
 
-//settigs 
-app.set('port', process.emitWarning.PORT || 4000)
+// Settings
+app.set('port', process.env.PORT || 4000)
 
-//middleware
+//Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-//routers
-app.use('/api',require('../routes/index'));
+//routes
+app.use('/prod', require('../routes/products.js'))
+app.use('/detail', require('../routes/detail.js'))
+app.use('/bill', require('../routes/bill.js'))
 
 module.exports = app

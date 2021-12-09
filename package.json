@@ -12,7 +12,7 @@
     "api",
     "mongo"
   ],
-  "author": "David Tamayo",
+  "author": "David Tamayo, Gina Pérez, Deisy Monroy",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
